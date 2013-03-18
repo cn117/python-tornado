@@ -1,0 +1,10 @@
+connect_info = []
+table_info = []
+from_table_column=[]
+to_table_column=[]
+from_table=""
+to_table=""
+from_sys=""
+to_sye=""
+path=""
+file_context=""

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>队列同步作业模板</title>
+    </head>
+    <body>
+        <form action="/next/next" enctype="multipart/form-data" method="post">
+        <tr>数据库链接信息：</tr>
+	<ul>
+       	{% for item in connect_items %}
+        <li>{{ escape(item) }}</li>
+	{% end %}</ul>
+	数据库中的所有表：<br>
+	<ul>
+	       	{% for item in table_items %}
+        <li>{{ escape(item) }}</li>
+	{% end %}</ul>
+	请输入需要同步的原表和目标表信息：<br>
+	from table:<input name="from_table" type="text"><br>
+	to table:<input name="to_table" type="text"><br>
+	<input type="submit" value="下一步">
+        </form>
+    </body>
+</html>
